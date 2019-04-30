@@ -2,10 +2,11 @@
 <head>
     <title>Author List</title>
     <style>
+        /*https://color.romanuke.com/tsvetovaya-palitra-4001/*/
         input {
             background-color:#dddcdc;
             border-width: medium;
-            border-color:  #b3603d;
+            border-color:  black;
         }
         a:hover {
             background: #b3603d ;
@@ -41,10 +42,12 @@
         <#if author?exists>
             <input type="hidden" name="id" value="${author.id}">
         </#if>
-        <br><br>
         <input type="reset" value="reset">
         <input type="submit" value="save">
     </form>
+    <#if author?exists>
+        <form action="/author/delete/${author.id}" method="post"><button type="submit">Delete</button></form>
+    </#if>
 </div>
 </body>
 </html>

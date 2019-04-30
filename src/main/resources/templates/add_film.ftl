@@ -56,13 +56,16 @@
                 <option>${author}</option>
             </#list>
         </select>
+        <br><br>
         <#if film?exists>
             <input type="hidden" name="id" value="${film.id}">
         </#if>
-        <br><br>
         <input type="reset" value="reset">
         <input type="submit" value="save">
     </form>
+    <#if film?exists>
+        <form action="/film/delete/${film.id}" method="post"><button type="submit">Delete</button></form>
+    </#if>
 </div>
 </body>
 </html>

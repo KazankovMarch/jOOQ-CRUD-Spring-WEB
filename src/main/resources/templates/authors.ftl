@@ -19,11 +19,9 @@
             background-color: #5f7f9e;
             height: 40;
         }
-
         a{
             color: #114068;
         }
-
         th{
             color: #b3603d;
         }
