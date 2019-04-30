@@ -117,6 +117,16 @@
                                 <password>${db.password}</password>
                             </jdbc>
                             <generator>
+                                <database>
+                                    <name>org.jooq.util.postgres.PostgresDatabase</name>
+                                    <includes>.*</includes>
+                                    <schemata>
+                                        <schema>
+                                            <inputSchema>public</inputSchema>
+                                        </schema>
+                                    </schemata>
+                                    <excludes></excludes>
+                                </database>
                                 <target>
                                     <packageName>ru.adkazankov.jooq_crud.db</packageName>
                                     <directory>src/main/java</directory>
