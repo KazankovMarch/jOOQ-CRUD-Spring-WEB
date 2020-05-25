@@ -1,31 +1,8 @@
 <html>
 <head>
     <title>Author List</title>
-    <style>
-        /*https://color.romanuke.com/tsvetovaya-palitra-4001/*/
-        input {
-            background-color:#dddcdc;
-            border-width: medium;
-            border-color:  black;
-        }
-        a:hover {
-            background: #b3603d ;
-            color: #114068;
-        }
-        a{
-            color: #114068;
-        }
-        select {
-            background-color: #5f7f9e;
-        }
-        button {
-            background-color: #5f7f9e;
-            height: 40;
-        }
-        body{
-            background-color:#8c6a5c;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/static/css/films.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/btn.css">
 </head>
 <body>
 <h3>Author</h3>

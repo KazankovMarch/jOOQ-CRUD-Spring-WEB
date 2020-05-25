@@ -1,36 +1,14 @@
 <html>
 <head>
     <title>Author List</title>
-    <style>
-        input {
-            background-color:#dddcdc;
-            border-width: medium;
-            border-color:  #b3603d;
-        }
-        a:hover {
-            background: #b3603d ;
-            color: #114068;
-        }
-        a{
-            color: #114068;
-        }
-        select {
-            background-color: #5f7f9e;
-        }
-        button {
-            background-color: #5f7f9e;
-            height: 40;
-        }
-        body{
-            background-color:#8c6a5c;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/static/css/films.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/btn.css">
 </head>
 <body>
 <h3>Film</h3>
 <a href="/film/all">All Films</a>
 <br><br>
-<div>
+<div class="container">
     <#if film?exists>
     </#if>
     <form method="post" name="film" action="/film">

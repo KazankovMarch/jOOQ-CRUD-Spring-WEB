@@ -1,8 +1,8 @@
 <html>
 <head>
-    <meta charset="utf-8">
     <title>Film List</title>
     <link rel="stylesheet" type="text/css" href="/static/css/films.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/btn.css">
 </head>
 <body>
 <h3>Films List</h3>

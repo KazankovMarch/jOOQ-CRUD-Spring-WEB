@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/films.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/btn.css">
     <title>Author List</title>
 </head>
 <body>
