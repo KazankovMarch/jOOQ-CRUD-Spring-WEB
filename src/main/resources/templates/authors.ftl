@@ -18,10 +18,14 @@
             <tr id="${author.id}">
                 <td>${author.name}</td>
                 <td onclick="window.location='/author/${author.id}'">Edit</td>
-                <td><form action="/author/delete/${author.id}" method="post"><button type="submit">Delete</button></form></td>
+                <td>
+                    <form action="/author/delete/${author.id}" method="post">
+                        <button class="blackBtn" type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         </#list>
-    </table>pos
+    </table>
 </div>
 <script type="application/javascript">
     function deleteAuthor(a) {

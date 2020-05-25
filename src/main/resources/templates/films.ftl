@@ -24,7 +24,7 @@
                 <td onclick="window.location='/film/${film.id}'">Edit</td>
                 <td>
                     <form action="/film/delete/${film.id}" method="post">
-                        <button type="submit">Delete</button>
+                        <button class="blackBtn" type="submit">Delete</button>
                     </form>
                 </td>
             </tr>
