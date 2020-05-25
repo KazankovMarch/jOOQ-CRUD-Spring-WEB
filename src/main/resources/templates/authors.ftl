@@ -1,37 +1,7 @@
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="/static/css/films.css">
     <title>Author List</title>
-    <style>
-        table{
-            background-color:#dddcdc;
-            border-width: medium;
-            border-color:  #b3603d;
-        }
-        tr{
-            color:#114068;
-        }
-        a:hover {
-            background: #b3603d ;
-            color: #114068;
-        }
-
-        button {
-            background-color: #5f7f9e;
-            height: 40;
-        }
-        a{
-            color: #114068;
-        }
-        th{
-            color: #b3603d;
-        }
-        body{
-            background-color:#8c6a5c;
-        }
-        ul{
-            background-color:#5f7f9e;
-        }
-    </style>
 </head>
 <body>
 <h3>Author List</h3>
@@ -39,7 +9,7 @@
 <a href="/film/all">Films</a>
 <br><br>
 <div>
-    <table>
+    <table class="container">
         <tr>
             <th>Author Name</th>
         </tr>

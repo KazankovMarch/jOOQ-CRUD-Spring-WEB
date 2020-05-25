@@ -1,39 +1,8 @@
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Film List</title>
-    <style>
-        table{
-            background-color:#dddcdc;
-            border-width: medium;
-            border-color:  #b3603d;
-        }
-        tr{
-            color:#114068;
-        }
-        a:hover {
-            background: #b3603d ;
-            color: #114068;
-        }
-
-        button {
-            background-color: #5f7f9e;
-            height: 40;
-        }
-
-        a{
-            color: #114068;
-        }
-
-        th{
-            color: #b3603d;
-        }
-        body{
-            background-color:#8c6a5c;
-        }
-        ul{
-            background-color:#5f7f9e;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/static/css/films.css">
 </head>
 <body>
 <h3>Films List</h3>
@@ -41,7 +10,7 @@
 <a href="/author/all">Authors</a>
 <br><br>
 <div>
-    <table>
+    <table class=container>
         <tr>
             <th>Film Name</th>
             <th>Author Name</th>
@@ -52,25 +21,15 @@
                 <td>${film.name}</td>
                 <td>${film.author}</td>
                 <td>${film.releaseDate}</td>
-                <td><a href="/film/${film.id}" >Edit</a></td>
-                <td><form action="/film/delete/${film.id}" method="post"><button type="submit">Delete</button></form></td>
+                <td><a href="/film/${film.id}">Edit</a></td>
+                <td>
+                    <form action="/film/delete/${film.id}" method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         </#list>
     </table>
 </div>
-<#--<script type="application/javascript">-->
-<#--    function deleteFilm(id) {-->
-<#--        console.log("/film/"+id);-->
-<#--        var xhr = new XMLHttpRequest();-->
-<#--        xhr.open("DELETE","/film/"+id);-->
-<#--        xhr.onreadystatechange = function (res) {-->
-<#--            if (xhr.readyState === 4) {-->
-<#--                if (xhr.status === 200) {-->
-<#--                }-->
-<#--            }-->
-<#--        };-->
-<#--        xhr.send(null);-->
-<#--    }-->
-<#--</script>-->
 </body>
 </html>
