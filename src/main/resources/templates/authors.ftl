@@ -16,13 +16,20 @@
         <#list authors as author>
             <tr id="${author.id}">
                 <td>${author.name}</td>
-                <td><a href="/author/${author.id}" >Edit</a></td>
+                <td onclick="window.location='/author/${author.id}'">Edit</td>
                 <td><form action="/author/delete/${author.id}" method="post"><button type="submit">Delete</button></form></td>
             </tr>
         </#list>
-    </table>
+    </table>pos
 </div>
-<#--<script type="application/javascript" src="functions.js">-->
-<#--</script>-->
+<script type="application/javascript">
+    function deleteAuthor(a) {
+        const address = location.host + '/author/delete/' + a;
+        console.log(address)
+        const request = new XMLHttpRequest();
+        request.open('POST', address, true);
+        request.send()
+    }
+</script>
 </body>
 </html>

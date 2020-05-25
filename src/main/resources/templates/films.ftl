@@ -21,7 +21,7 @@
                 <td>${film.name}</td>
                 <td>${film.author}</td>
                 <td>${film.releaseDate}</td>
-                <td><a href="/film/${film.id}">Edit</a></td>
+                <td onclick="window.location='/film/${film.id}'">Edit</td>
                 <td>
                     <form action="/film/delete/${film.id}" method="post">
                         <button type="submit">Delete</button>
@@ -31,5 +31,16 @@
         </#list>
     </table>
 </div>
+
+<script type="application/javascript">
+    function deleteFilm(a) {
+        const address = location.host + '/film/delete/' + a;
+        console.log(address)
+        const request = new XMLHttpRequest();
+        request.open('POST', address, true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.send()
+    }
+</script>
 </body>
 </html>
